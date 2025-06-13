@@ -4,7 +4,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     var username = document.getElementById("floatingInput").value;
     var password = document.getElementById("floatingPassword").value;
 
-    if (username === "epinto" && password === "000044462") {
+    if (username === "upana" && password === "0000") {
         window.location.href = "main.html";
     } else {
         alert("Los credenciales ingresados son inválidos.")
