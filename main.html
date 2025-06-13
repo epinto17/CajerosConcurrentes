@@ -29,7 +29,7 @@
                 <p class="fs-5 text-muted">Aquí se muestra la simulación de cajeros concurrentes, utilizando funciones asíncronas en JavaScript.</p>
             </div>
         </header>
-
+        <br>
         <div class="container">
             <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -41,65 +41,54 @@
                         <li><a class="dropdown-item" href="#">Cobro Remesa</a></li>
                         <li><a class="dropdown-item" href="#">Consulta de Saldo</a></li>
                     </ul>
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cajeros
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Cajero 1</a></li>
+                        <li><a class="dropdown-item" href="#">Cajero 2</a></li>
+                        <li><a class="dropdown-item" href="#">Cajero 3</a></li>
+                    </ul>
+                    <button type="submit" class="btn btn-primary">Agregar Cliente</button>
+                    <button type="submit" class="btn btn-primary" id="btn-iniciar">Iniciar</button>
             </div>
-            <br>
-            <form class="row g-3">
-                <div class="col-auto">
-                    <label for="inputUser" class="visually-hidden">Nombre Cliente:</label>
-                    <input type="text" class="form-control" id="inputUser" placeholder="Nombre Cliente:">
-                </div>
-                <div class="col-auto">
-                    <label for="inputMonto" class="visually-hidden">Monto:</label>
-                    <input type="text" class="form-control" id="inputMonto" placeholder="Monto:">
-                </div>
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-3">Agregar Cliente</button>
-                </div>
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-3" id="btn-iniciar">Iniciar</button>
-                </div>
-            </form>
         </div>
-
         <hr class="border border-secondary border-1 opacity-50">
         <main>
             <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm">
                         <div class="card-header py-3">
-                            <h4 class="my-0 fw-normal">Cajero #1</h4>
+                            <h4 class="my-0 fw-normal">CAJERO 1</h4>
                         </div>
                         <div class="card-body">
                             <div id="ca-1"></div>
                             <ul class="list-unstyled mt-3 mb-4" id="log1">
                             </ul>
-                            <!--<button type="button" class="w-100 btn btn-lg btn-outline-primary" id="hc1">Historial</button>-->
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm">
                         <div class="card-header py-3">
-                            <h4 class="my-0 fw-normal">Cajero #2</h4>
+                            <h4 class="my-0 fw-normal">CAJERO 2</h4>
                         </div>
                         <div class="card-body">
                             <div id="ca-2"></div>
                             <ul class="list-unstyled mt-3 mb-4" id="log2">
                             </ul>
-                            <!--<button type="button" class="w-100 btn btn-lg btn-primary" id="hc2">Historial</button>-->
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card mb-4 rounded-3 shadow-sm">
                         <div class="card-header py-3">
-                            <h4 class="my-0 fw-normal">Cajero #3</h4>
+                            <h4 class="my-0 fw-normal">CAJERO 3</h4>
                         </div>
                         <div class="card-body">
                             <div id="ca-3"></div>
                             <ul class="list-unstyled mt-3 mb-4" id="log3">
                             </ul>
-                            <!--<button type="button" class="w-100 btn btn-lg btn-primary" id="hc3">Historial</button>-->
                         </div>
                     </div>
                 </div>
