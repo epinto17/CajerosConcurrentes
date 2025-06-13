@@ -1,32 +1,34 @@
 class Cliente {
-  constructor(nombre, saldo = 0) {
+  constructor(nombre) {
     this.nombre = nombre;
-    this.saldo = saldo;
   }
 
-  depositar(monto) {
-    this.saldo += monto;
-    return `${this.nombre} depositó Q${monto}. Saldo actual: Q${this.saldo}`;
+  depositar() {
+    return `${this.nombre} realizó un Depósito.`;
   }
 
-  retirar(monto) {
-    if (this.saldo >= monto) {
-      this.saldo -= monto;
-      return `${this.nombre} retiró Q${monto}. Saldo actual: Q${this.saldo}`;
-    } else {
-      return `${this.nombre} no tiene fondos suficientes para retirar Q${monto}.`;
-    }
+  retirar() {
+    return `${this.nombre} realizó un Retiro.`;
   }
 
-  cobrarRemesa(monto) {
-    this.saldo += monto;
-    return `${this.nombre} cobró una remesa de Q${monto}. Saldo actual: Q${this.saldo}`;
+  cobrarRemesa() {
+    return `${this.nombre} realizó un Cobro de Remesa.`;
   }
 
   consultarEstadoCuenta() {
-    return `${this.nombre} consultó su saldo. Saldo actual: Q${this.saldo}`;
+    return `${this.nombre} consultó su cuenta.`;
   }
 }
+
+let selectedAccion = "depositar";
+let selectedCajero = "cajero1";
+let contadorClientes = 1;
+
+const cajeros = {
+  cajero1: { queue: [], busy: false, num: 1 },
+  cajero2: { queue: [], busy: false, num: 2 },
+  cajero3: { queue: [], busy: false, num: 3 },
+};
 
 function transaccionAleatoria(cliente) {
   const acciones = [
